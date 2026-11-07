@@ -11,6 +11,8 @@
     location.replace(NEW_SITE + p.replace(/^\/real-life-bisaya\/?/, "/") + tail);
   } else if (p.indexOf("/cebuano-listening/") === 0 || p === "/cebuano-listening") {
     location.replace(NEW_SITE + "/listening/" + tail);
+  } else if (p.indexOf("/cebuano-speaking/") === 0 || p === "/cebuano-speaking") {
+    location.replace(NEW_SITE + "/trainer/");
   }
 </script>
 </head>
