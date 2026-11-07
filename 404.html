@@ -4,10 +4,13 @@
 <meta charset="utf-8">
 <title>Page not found</title>
 <script>
+  var NEW_SITE = "https://real-life-bisaya.bisayacebuano.workers.dev";
   var p = location.pathname;
+  var tail = location.search + location.hash;
   if (p.indexOf("/real-life-bisaya/") === 0 || p === "/real-life-bisaya") {
-    var rest = p.replace(/^\/real-life-bisaya\/?/, "/");
-    location.replace("https://real-life-bisaya.bisayacebuano.workers.dev" + rest + location.search + location.hash);
+    location.replace(NEW_SITE + p.replace(/^\/real-life-bisaya\/?/, "/") + tail);
+  } else if (p.indexOf("/cebuano-listening/") === 0 || p === "/cebuano-listening") {
+    location.replace(NEW_SITE + "/listening/" + tail);
   }
 </script>
 </head>
