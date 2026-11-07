@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Page not found</title>
+<script>
+  var p = location.pathname;
+  if (p.indexOf("/real-life-bisaya/") === 0 || p === "/real-life-bisaya") {
+    var rest = p.replace(/^\/real-life-bisaya\/?/, "/");
+    location.replace("https://real-life-bisaya.cdy10750.workers.dev" + rest + location.search + location.hash);
+  }
+</script>
+</head>
+<body>
+<p>Page not found.</p>
+</body>
+</html>
